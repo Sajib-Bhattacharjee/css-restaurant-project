@@ -1,0 +1,834 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset Code Starts Here  */
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: italic;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.body-height {
+  min-height: 80vh;
+  background-color: antiquewhite;
+}
+.right-margin {
+  margin-right: 1rem;
+}
+.left-margin {
+  margin-left: 1rem;
+}
+/* Reset Code Ends Here  */
+
+/* Header Section Starts Here  */
+
+.header {
+  background-color: #0c253b;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+.logo-img {
+  flex: 1;
+}
+.logo {
+  width: 80px;
+  height: auto;
+  border-radius: 100%;
+  opacity: 0.5;
+  transition: all 0.6s;
+  margin: 1rem;
+}
+.logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar li {
+  list-style: none;
+  margin-left: 20px;
+
+  padding: 4px;
+  border-radius: 2rem;
+  transition: all 0.6s;
+  text-align: center;
+}
+.nav-bar li:hover {
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+}
+
+.nav-bar li i {
+  margin-right: 4px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .nav-bar li {
+    margin: 10px 0;
+  }
+
+  .nav-bar li:first-child {
+    margin-top: 0;
+  }
+}
+
+/* Header Section Ends Here  */
+
+/* Header Main Section Starts Here  */
+
+/* Styles for restaurant card */
+.restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.resturant {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.6s ease;
+}
+
+.resturant:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 4px black;
+}
+
+.resturant-logo {
+  width: 100%;
+}
+
+.resturant-logo-img {
+  width: 100%;
+  height: auto;
+}
+
+.resturant-description {
+  padding: 20px;
+}
+
+.resturant-description a {
+  text-decoration: none;
+  color: #333;
+  color: green;
+}
+
+.resturant-description h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.resturant-description p {
+  margin-bottom: 10px;
+}
+
+.resturant-description p:first-of-type {
+  font-weight: bold;
+}
+
+/* Styles for recipe card */
+.recipes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recipe {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.recipe:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 4px black;
+}
+
+.recipe-heading {
+  width: 100%;
+}
+
+.recipe-heading img {
+  width: 100%;
+  height: 200px;
+}
+
+.recipe-body {
+  padding: 20px;
+}
+
+.recipe-body h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.recipe-body p {
+  margin-bottom: 10px;
+}
+
+/* Contact Section Starts Here  */
+.contact {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  background-color: gray;
+  color: white;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 400px;
+
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type='submit'] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+.contact-map {
+}
+.contact-map h2 {
+  text-align: center;
+}
+.contact-map iframe {
+  border-radius: 20px;
+}
+/* Contact Section Ends Here  */
+
+/* Footer Section Starts Here  */
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  gap: 20px;
+}
+
+.footer-left {
+}
+
+.footer-left h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-left form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left label {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.footer-left input[type='email'] {
+  width: 200px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-left button[type='submit'] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-left button[type='submit']:hover {
+  background-color: #0056b3;
+}
+.footer-right {
+  text-align: center;
+}
+.footer-right p {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.footer-right a {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 1.5rem;
+}
+
+.footer-right a:hover {
+  color: greenyellow;
+}
+
+/* Footer Section Ends Here */
+
+/* Flovor Section Starts Here  */
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* About and review Section Starts Here  */
+
+.about-reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.about {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.reviews {
+  flex: 2;
+}
+
+.review {
+  margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .about-reviews {
+    flex-direction: column;
+  }
+
+  .about,
+  .reviews {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* About and review Section Starts Here  */
+
+/* Booking and find Section Starts Here  */
+.booking-find-feedback {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgb(215, 235, 250);
+}
+
+.booking {
+  text-align: center;
+  margin: 1rem;
+}
+.booking h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.booking form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[type='time'],
+input[type='number'],
+button[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+button[type='submit'] {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+.find {
+  text-align: center;
+  margin: 1rem;
+}
+.find h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.find iframe {
+  border-radius: 20px;
+}
+
+/* Booking and find Section Ends Here  */
+
+/* Flovor Section Starts Here  */
+
+.flovor-banner {
+  min-height: 70vh;
+
+  background-image: url(../images/banner-img.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testy-banner {
+  min-height: 70vh;
+
+  background-image: url(../images/testy-img.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flovor-banner-descripiton {
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.marquee-title {
+  margin-bottom: 8rem;
+}
+.marquee-title marquee {
+  color: yellow;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.marquee-body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  flex-direction: column;
+  max-width: 700px;
+  background-color: indigo;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px white;
+
+  transition: all 0.6s;
+}
+
+.marquee-body:hover {
+  transform: scale(1.04);
+}
+.marquee-body h2 {
+  margin-bottom: 2rem;
+}
+
+.customer-reviews {
+  background-color: antiquewhite;
+}
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.review-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  background-color: rgb(102, 0, 128);
+  padding: 1rem;
+  color: white;
+  border-radius: 20px;
+  margin: 0.4rem;
+}
+.review-card-descriptions {
+}
+.review-card-descriptions h3 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+.review-card-descriptions p {
+  font-size: 1rem;
+  font-style: italic;
+}
+.review-card-image {
+}
+.review-card-img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Blog Section Stars Here  */
+.main {
+  min-height: 80vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.blog-container {
+  background-color: #fff;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.blog-post {
+  width: 600px;
+  height: 200px;
+  background-color: aliceblue;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  transition: all 0.6s;
+}
+.blog-post:hover {
+  box-shadow: 4px 4px 4px black;
+  transform: scale(1.04);
+}
+.blog-post h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.blog-post p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.blog-post p:last-child {
+  margin-bottom: 0;
+}
+.blog-post .meta {
+  font-size: 14px;
+  color: #666;
+}
+.blog-post .meta span {
+  margin-right: 10px;
+}
+/* Blog Section Ends Here */
+
+/* Resturantrs Section Starts Here  */
+
+.our-restaurants {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.our-restaurant {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem;
+  color: white;
+  padding: 1.5rem;
+}
+.our-restaurant-details {
+  flex: 1.4;
+  background-color: indigo;
+}
+.our-restaurant-details-body {
+  margin: 1rem;
+  border: 2px solid yellowgreen;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.6s;
+}
+
+.our-restaurant-rating {
+  max-width: 300px;
+}
+.our-restaurant-image {
+  max-width: 200px;
+}
+.our-restaurant-logo {
+  height: 100%;
+  width: 100%;
+}
+.our-restaurant-name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.our-restaurant-review {
+  flex: 1;
+  background-color: green;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.our-restaurant-review p {
+  font-size: 1rem;
+}
+/* Resturantrs Section Ends Here  */
+
+/* Reciepes Section Starts Here  */
+
+.our-recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-recipe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid pink;
+  box-shadow: 3px 3px 3px green;
+}
+
+.our-recipe-image {
+  display: flex;
+  flex: 1.2;
+}
+
+.our-recipe-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.our-recipe-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border: 2px solid green;
+  padding: 0.6rem;
+  text-align: center;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .our-recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .our-recipe-description {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .our-recipe-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+}
+/* Recipes Section Ends Here */
+
+/* Contact Section Starts Here  */
+
+.our-contact-section {
+}
+
+.our-contact-info-map {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.our-contact-info {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+  padding: 0 20px;
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+
+.our-contact-map {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 20px;
+  margin: 1rem;
+}
+.our-contact-map p {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.our-contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+.our-contact-form {
+  margin: 2rem;
+}
+
+.our-contact-from-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.our-contact-from-info textarea {
+  height: 200px;
+}
+/* Contact Sectin Starts Here    */
